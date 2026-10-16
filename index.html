@@ -1,0 +1,438 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Stoic Meditation</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one inscribed tablet of marble (light) or granite (dark). Roman date rail on the left, the passage carved in a wide panel, mono countdown at its foot, a full-width footnote closing the page with "Vale". Spacing runs on one scale: 8 / 12 / 16 / 24 / 40 / 64. */
+:root{
+  --stone:#E3E5E8; --slab:#F8F8F6; --ink:#1D2125; --ink-soft:#5D646C; --rule:#CDD2D8;
+  --blue:#4C7CA4; --blue-wash:rgba(76,124,164,.10);
+  --n-yellow:#A07C10; --n-purple:#7449B0; --n-blue:#2D6CB2; --n-red:#B23838; --n-orange:#BF5E17;
+  --tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0025 0.011' numOctaves='5' seed='11'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.45 0 0 0 0 0.5 0 0 0 1.25 -0.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  --f-display:"Cinzel","Trajan Pro",Georgia,serif;
+  --f-body:"Spectral",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --shadow:0 1px 0 rgba(255,255,255,.8) inset, 0 28px 60px -34px rgba(25,35,48,.38);
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:40px; --s6:64px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --stone:#0F1113; --slab:#1B1D20; --ink:#E7E8EA; --ink-soft:#9CA3AB; --rule:#2F343A;
+  --blue:#A3C8E6; --blue-wash:rgba(163,200,230,.10); --n-yellow:#E8C454; --n-purple:#BC98F2; --n-blue:#8EBCF0; --n-red:#F08C8C; --n-orange:#F2A35F; --tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.75 0 0 0 0 0.78 0 0 0 0 0.82 0 0 0 0.75 -0.42'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 28px 60px -34px rgba(0,0,0,.85); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --stone:#0F1113; --slab:#1B1D20; --ink:#E7E8EA; --ink-soft:#9CA3AB; --rule:#2F343A;
+  --blue:#A3C8E6; --blue-wash:rgba(163,200,230,.10); --n-yellow:#E8C454; --n-purple:#BC98F2; --n-blue:#8EBCF0; --n-red:#F08C8C; --n-orange:#F2A35F; --tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.75 0 0 0 0 0.78 0 0 0 0 0.82 0 0 0 0.75 -0.42'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 28px 60px -34px rgba(0,0,0,.85); color-scheme:dark}
+
+html,body{min-height:100%}
+body{background:var(--stone);color:var(--ink);font-family:var(--f-body);transition:background .3s,color .3s;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:clamp(var(--s4),5vh,var(--s6))}
+.page{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:var(--s5)}
+.wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(var(--s3),3vw,var(--s5))}
+.rail{display:flex;flex-direction:column;align-items:center;gap:var(--s2);padding-top:var(--s1)}
+.rail .roman{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-display);font-weight:600;
+  letter-spacing:.32em;font-size:.95rem;color:var(--blue)}
+.rail .line{width:1px;flex:1;min-height:60px;background:var(--rule)}
+.rail .dies{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-display);letter-spacing:.24em;font-size:.72rem;color:var(--ink-soft)}
+
+main{min-width:0;display:flex;flex-direction:column;gap:var(--s4)}
+header{display:flex;justify-content:space-between;align-items:center;gap:var(--s2) var(--s4);flex-wrap:wrap}
+h1{margin:0;font-family:var(--f-display);font-weight:600;font-size:clamp(1.05rem,2.2vw,1.3rem);letter-spacing:.3em;text-transform:uppercase;line-height:1}
+
+.menu{display:flex;align-items:center;gap:var(--s2)}
+.langs{display:flex;gap:2px}
+.langs button,.theme{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;color:var(--ink-soft);background:transparent;
+  border:0;border-radius:2px;padding:6px 7px;cursor:pointer;transition:color .2s,background .2s}
+.langs button:hover,.theme:hover{color:var(--ink)}
+.langs button[aria-pressed="true"]{color:var(--blue);background:var(--blue-wash)}
+.menu .sep{width:1px;height:16px;background:var(--rule)}
+.theme{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0}
+.theme i{display:block;width:14px;height:14px;border-radius:50%;border:1.5px solid currentColor;
+  background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+.stage{perspective:1600px}
+.stage .stele{transform-origin:50% 0}
+.stele{background:var(--tex) center/cover,var(--slab);border:1px solid var(--rule);border-radius:2px;box-shadow:var(--shadow);
+  padding:clamp(var(--s5),6vw,var(--s6)) clamp(var(--s4),6vw,var(--s6)) clamp(var(--s4),4vw,var(--s5));
+  display:flex;flex-direction:column;align-items:flex-start;
+  transform-origin:50% 0;transition:transform .55s cubic-bezier(.6,0,.3,1),opacity .55s}
+.stele.turning{transform:rotateX(-88deg);opacity:0}
+.stele.arriving{transform:rotateX(88deg);opacity:0;transition:none}
+.stele.fade{opacity:.15;transition:opacity .18s}
+.disc{display:inline-flex;align-items:center;gap:var(--s1);font-family:var(--f-display);font-size:.72rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--blue);background:var(--blue-wash);padding:6px var(--s2);border-radius:2px}
+.disc::before{content:"";width:6px;height:6px;background:currentColor;transform:rotate(45deg)}
+blockquote{margin:var(--s5) 0 0;font-weight:300;font-size:clamp(1.45rem,3.5vw,2.45rem);line-height:1.36;
+  max-width:none;width:100%;text-wrap:pretty;letter-spacing:-.005em}
+blockquote::first-letter{font-family:var(--f-display);color:var(--blue);font-weight:500}
+.cite{margin-top:var(--s4);display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);align-items:baseline}
+.author{font-family:var(--f-display);font-weight:600;letter-spacing:.22em;font-size:.86rem;text-transform:uppercase}
+.work{font-style:italic;color:var(--ink-soft);font-size:1rem}
+.reflect{align-self:stretch;margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:var(--s1)}
+.reflect .lab{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.reflect p{margin:0;font-size:1.12rem;line-height:1.55;font-style:italic;text-wrap:pretty}
+
+/* header second line: status + actions */
+.status{display:flex;justify-content:space-between;align-items:center;gap:var(--s1) var(--s4);flex-wrap:wrap;margin-top:calc(var(--s1) * -1)}
+.meta{font-family:var(--f-mono);font-size:.76rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;letter-spacing:.04em;display:flex;flex-wrap:wrap;gap:0 .6em}
+.meta>span{white-space:nowrap}
+.meta .dot{opacity:.5}
+.meta b{font-weight:500;color:var(--ink-soft)}
+.acts{display:flex;align-items:center;gap:2px}
+.act{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:var(--ink-soft);
+  background:transparent;border:0;border-radius:2px;padding:6px 8px;cursor:pointer;white-space:nowrap;transition:color .2s,background .2s}
+.act svg{width:13px;height:13px;flex:none;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s}
+.act:hover{color:var(--blue);background:var(--blue-wash)}
+.act:hover #renew-ico{transform:rotate(-180deg)}
+
+/* meditation notes */
+.notes{display:flex;flex-direction:column;gap:var(--s2)}
+.notes-head{display:flex;justify-content:space-between;align-items:center;gap:var(--s1) var(--s3);flex-wrap:wrap}
+.notes-head .lab{font-family:var(--f-display);font-weight:600;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink)}
+.tools{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.tool{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--f-body);font-size:1rem;
+  color:var(--ink-soft);background:transparent;border:0;border-radius:2px;cursor:pointer;transition:color .2s,background .2s}
+.tool:hover{color:var(--ink);background:var(--blue-wash)}
+.tool[aria-pressed="true"]{color:var(--blue);background:var(--blue-wash)}
+.tool.b{font-weight:600}.tool.i{font-style:italic}.tool.u{text-decoration:underline;text-underline-offset:3px}
+.tools .sep{width:1px;height:16px;background:var(--rule);margin:0 var(--s1)}
+.sw{width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;border-radius:50%;cursor:pointer;padding:0}
+.sw i{display:block;width:13px;height:13px;border-radius:50%;background:var(--c);transition:transform .15s}
+.sw:hover i{transform:scale(1.2)}
+.sw[data-c="ink"] i{background:transparent;border:1.5px solid var(--ink)}
+.field{min-height:180px;background:var(--slab);border:1px solid var(--rule);border-radius:2px;
+  padding:var(--s4) clamp(var(--s3),4vw,var(--s5));font-family:var(--f-body);font-size:1.12rem;line-height:1.65;color:var(--ink);
+  outline:none;overflow-wrap:anywhere;transition:border-color .2s}
+.field:focus{border-color:var(--blue)}
+.field:empty::before{content:attr(data-ph);color:var(--ink-soft);font-style:italic;pointer-events:none}
+.field b,.field strong{font-weight:600}
+.field font[color="#000001"]{color:var(--ink)}.field font[color="#000002"]{color:var(--n-yellow)}.field font[color="#000003"]{color:var(--n-purple)}
+.field font[color="#000004"]{color:var(--n-blue)}.field font[color="#000005"]{color:var(--n-red)}.field font[color="#000006"]{color:var(--n-orange)}
+.c-yellow{color:var(--n-yellow)}.c-purple{color:var(--n-purple)}.c-blue{color:var(--n-blue)}.c-red{color:var(--n-red)}.c-orange{color:var(--n-orange)}.c-ink{color:var(--ink)}
+.saved{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-soft);min-height:1em}
+footer{border-top:1px solid var(--rule);padding-top:var(--s4);display:flex;flex-direction:column;gap:var(--s3)}
+footer p{margin:0;font-size:.9rem;line-height:1.6;color:var(--ink-soft)}
+footer .vale{font-family:var(--f-display);letter-spacing:.3em;font-size:.8rem;color:var(--blue)}
+
+@media (max-width:600px){
+  .wrap{grid-template-columns:minmax(0,1fr)}
+  .rail{flex-direction:row;padding-top:0;gap:var(--s2)}
+  .rail .roman,.rail .dies{writing-mode:horizontal-tb;transform:none}
+  .rail .line{height:1px;min-height:0;width:auto;flex:1}
+  blockquote{margin-top:var(--s4)}
+  .rail .roman,.rail .dies{white-space:nowrap}
+  .rail .roman{letter-spacing:.18em;font-size:.85rem}
+  .rail .dies{letter-spacing:.16em}
+}
+@media (prefers-reduced-motion:reduce){
+  .stele,.stele.turning,.stele.arriving{transform:none!important;transition:opacity .3s}
+  body{transition:none}
+}
+</style>
+
+
+<div class="page">
+  <div class="wrap">
+    <aside class="rail" aria-hidden="true">
+      <span class="roman" id="roman">XVI · X · MMXXVI</span>
+      <span class="line"></span>
+      <span class="dies" id="dies">Dies Veneris</span>
+    </aside>
+
+    <main>
+      <header>
+        <h1>Stoic Meditation</h1>
+        <nav class="menu" aria-label="Settings">
+          <div class="langs" id="langs" role="group" aria-label="Language">
+            <button type="button" data-l="en" id="l-en">EN</button>
+            <button type="button" data-l="pt" id="l-pt">PT</button>
+            <button type="button" data-l="es" id="l-es">ES</button>
+            <button type="button" data-l="fr" id="l-fr">FR</button>
+            <button type="button" data-l="it" id="l-it">IT</button>
+          </div>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" class="theme" id="theme" aria-label="Switch to dark mode"><i></i></button>
+        </nav>
+      </header>
+      <div class="status">
+        <span class="meta"><span id="daynum">Day 1</span><span class="dot">·</span><span id="mednum">Meditation 1</span><span class="dot">·</span><span id="clock"><span id="nextlab">next in</span> <b id="countdown">--:--:--</b></span></span>
+        <div class="acts">
+          <button class="act" id="renew" type="button"><svg id="renew-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4.5h-4.5"/></svg><span id="renew-l">New meditation</span></button>
+          <button class="act" id="copy" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span id="copy-l">Copy</span></button>
+        </div>
+      </div>
+
+      <div class="stage">
+          <article class="stele" id="stele" aria-live="polite">
+            <span class="disc" id="disc">Perception</span>
+            <blockquote id="text">Of things some are in our power, and others are not.</blockquote>
+            <div class="cite">
+              <span class="author" id="author">Epictetus</span>
+              <span class="work" id="work">Enchiridion 1</span>
+            </div>
+            <div class="reflect">
+              <span class="lab" id="lab">For today</span>
+              <p id="prompt">Which worry on your list today is actually yours to act on?</p>
+            </div>
+          </article>
+        </div>
+
+      <section class="notes" aria-labelledby="notes-lab">
+        <div class="notes-head">
+          <span class="lab" id="notes-lab">Meditation notes</span>
+          <div class="tools" id="tools" role="toolbar" aria-label="Formatting">
+            <button type="button" class="tool b" data-cmd="bold" id="t-b" aria-pressed="false">B</button>
+            <button type="button" class="tool i" data-cmd="italic" id="t-i" aria-pressed="false">I</button>
+            <button type="button" class="tool u" data-cmd="underline" id="t-u" aria-pressed="false">U</button>
+            <span class="sep" aria-hidden="true"></span>
+            <button type="button" class="sw" data-c="ink" id="c-ink"><i></i></button>
+            <button type="button" class="sw" data-c="yellow" id="c-yellow" style="--c:var(--n-yellow)"><i></i></button>
+            <button type="button" class="sw" data-c="purple" id="c-purple" style="--c:var(--n-purple)"><i></i></button>
+            <button type="button" class="sw" data-c="blue" id="c-blue" style="--c:var(--n-blue)"><i></i></button>
+            <button type="button" class="sw" data-c="red" id="c-red" style="--c:var(--n-red)"><i></i></button>
+            <button type="button" class="sw" data-c="orange" id="c-orange" style="--c:var(--n-orange)"><i></i></button>
+          </div>
+        </div>
+        <div class="field" id="field" contenteditable="true" role="textbox" aria-multiline="true" aria-labelledby="notes-lab" data-ph="How do you feel about this meditation?"></div>
+        <span class="saved" id="saved" aria-live="polite"></span>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p id="note">One passage a day for everyone, turning at midnight in London (BST in summer, GMT in winter). Each cycle through the collection is shuffled into a new order, so the sequence never repeats the same way twice.</p>
+    <span class="vale">VALE</span>
+  </footer>
+</div>
+
+<script>
+const UI={
+ en:{nlab:"Meditation notes",ph:"How do you feel about this meditation?",saving:"Saving…",saved:"Saved privately",local:"Saved on this device",fail:"Couldn’t save. Your text is still here; keep the page open and try again.",b:"Bold",i:"Italic",u:"Underline",cols:["Default", "Yellow", "Purple", "Blue", "Red", "Orange"],day:"Day",med:"Meditation",before:"Before the first day",lab:"For today",next:"next in",tz:"00:00 London time",copy:"Copy",copied:"Copied",sel:"Selected",renew:"New meditation",back:"Back to today’s passage",toDark:"Switch to dark mode",toLight:"Switch to light mode",
+  note:"One passage a day for everyone, turning at midnight in London (BST in summer, GMT in winter). Each cycle through the collection is shuffled into a new order, so the sequence never repeats the same way twice. English passages are adapted from public-domain translations by George Long, Richard Gummere and R. D. Hicks.",
+  disc:{P:"Perception",A:"Action",W:"Will"}},
+ pt:{nlab:"Notas da meditação",ph:"Como você se sente com esta meditação?",saving:"Salvando…",saved:"Salvo com privacidade",local:"Salvo neste dispositivo",fail:"Não foi possível salvar. Seu texto continua aqui; mantenha a página aberta e tente de novo.",b:"Negrito",i:"Itálico",u:"Sublinhado",cols:["Padrão", "Amarelo", "Roxo", "Azul", "Vermelho", "Laranja"],day:"Dia",med:"Meditação",before:"Antes do primeiro dia",lab:"Para hoje",next:"próxima em",tz:"00:00, horário de Londres",copy:"Copiar",copied:"Copiado",sel:"Selecionado",renew:"Nova meditação",back:"Voltar à passagem de hoje",toDark:"Mudar para modo escuro",toLight:"Mudar para modo claro",
+  note:"Uma passagem por dia para todos, virando à meia-noite de Londres (BST no verão, GMT no inverno). Cada ciclo pela coleção é embaralhado numa ordem nova, então a sequência nunca se repete do mesmo jeito. As traduções para o português são nossas, feitas a partir de versões em domínio público.",
+  disc:{P:"Percepção",A:"Ação",W:"Vontade"}},
+ es:{nlab:"Notas de la meditación",ph:"¿Cómo te sientes con esta meditación?",saving:"Guardando…",saved:"Guardado en privado",local:"Guardado en este dispositivo",fail:"No se pudo guardar. Tu texto sigue aquí; mantén la página abierta e inténtalo de nuevo.",b:"Negrita",i:"Cursiva",u:"Subrayado",cols:["Predeterminado", "Amarillo", "Morado", "Azul", "Rojo", "Naranja"],day:"Día",med:"Meditación",before:"Antes del primer día",lab:"Para hoy",next:"próxima en",tz:"00:00, hora de Londres",copy:"Copiar",copied:"Copiado",sel:"Seleccionado",renew:"Nueva meditación",back:"Volver al pasaje de hoy",toDark:"Cambiar a modo oscuro",toLight:"Cambiar a modo claro",
+  note:"Un pasaje al día para todos, que cambia a medianoche en Londres (BST en verano, GMT en invierno). Cada ciclo por la colección se baraja en un orden nuevo, así que la secuencia nunca se repite de la misma manera. Las traducciones al español son propias, hechas a partir de versiones de dominio público.",
+  disc:{P:"Percepción",A:"Acción",W:"Voluntad"}},
+ fr:{nlab:"Notes de méditation",ph:"Que ressens-tu face à cette méditation ?",saving:"Enregistrement…",saved:"Enregistré en privé",local:"Enregistré sur cet appareil",fail:"Impossible d’enregistrer. Ton texte est toujours là ; garde la page ouverte et réessaie.",b:"Gras",i:"Italique",u:"Souligné",cols:["Par défaut", "Jaune", "Violet", "Bleu", "Rouge", "Orange"],day:"Jour",med:"Méditation",before:"Avant le premier jour",lab:"Pour aujourd’hui",next:"suivante dans",tz:"00 h 00, heure de Londres",copy:"Copier",copied:"Copié",sel:"Sélectionné",renew:"Nouvelle méditation",back:"Revenir au passage du jour",toDark:"Passer en mode sombre",toLight:"Passer en mode clair",
+  note:"Un passage par jour pour tous, qui tourne à minuit, heure de Londres (BST en été, GMT en hiver). Chaque cycle de la collection est mélangé dans un nouvel ordre, si bien que la séquence ne se répète jamais de la même façon. Les traductions françaises sont les nôtres, établies à partir de versions du domaine public.",
+  disc:{P:"Perception",A:"Action",W:"Volonté"}},
+ it:{nlab:"Note di meditazione",ph:"Come ti senti riguardo a questa meditazione?",saving:"Salvataggio…",saved:"Salvato in privato",local:"Salvato su questo dispositivo",fail:"Impossibile salvare. Il testo è ancora qui; tieni aperta la pagina e riprova.",b:"Grassetto",i:"Corsivo",u:"Sottolineato",cols:["Predefinito", "Giallo", "Viola", "Blu", "Rosso", "Arancione"],day:"Giorno",med:"Meditazione",before:"Prima del primo giorno",lab:"Per oggi",next:"prossima tra",tz:"00:00, ora di Londra",copy:"Copia",copied:"Copiato",sel:"Selezionato",renew:"Nuova meditazione",back:"Torna al passo di oggi",toDark:"Passa alla modalità scura",toLight:"Passa alla modalità chiara",
+  note:"Un passo al giorno per tutti, che cambia a mezzanotte, ora di Londra (BST d’estate, GMT d’inverno). Ogni ciclo della raccolta viene mescolato in un ordine nuovo, così la sequenza non si ripete mai allo stesso modo. Le traduzioni italiane sono nostre, a partire da versioni di pubblico dominio.",
+  disc:{P:"Percezione",A:"Azione",W:"Volontà"}}
+};
+const AUTH={M:{en:"Marcus Aurelius",pt:"Marco Aurélio",es:"Marco Aurelio",fr:"Marc Aurèle",it:"Marco Aurelio"},
+ E:{en:"Epictetus",pt:"Epicteto",es:"Epicteto",fr:"Épictète",it:"Epitteto"},
+ S:{en:"Seneca",pt:"Sêneca",es:"Séneca",fr:"Sénèque",it:"Seneca"},
+ Z:{en:"Zeno of Citium",pt:"Zenão de Cítio",es:"Zenón de Citio",fr:"Zénon de Kition",it:"Zenone di Cizio"}};
+const WORK={med:{en:"Meditations",pt:"Meditações",es:"Meditaciones",fr:"Pensées",it:"Pensieri"},
+ ench:{en:"Enchiridion",pt:"Enchirídion",es:"Enquiridión",fr:"Manuel",it:"Manuale"},
+ disc:{en:"Discourses",pt:"Diatribes",es:"Disertaciones",fr:"Entretiens",it:"Diatribe"},
+ frag:{en:"Fragments",pt:"Fragmentos",es:"Fragmentos",fr:"Fragments",it:"Frammenti"},
+ ep:{en:"Letters to Lucilius",pt:"Cartas a Lucílio",es:"Cartas a Lucilio",fr:"Lettres à Lucilius",it:"Lettere a Lucilio"},
+ dl:{en:"Diogenes Laertius, Lives of the Philosophers",pt:"Diógenes Laércio, Vidas dos filósofos",es:"Diógenes Laercio, Vidas de los filósofos",fr:"Diogène Laërce, Vies des philosophes",it:"Diogene Laerzio, Vite dei filosofi"}};
+function cite(e){return WORK[e[1]][lang]+(e[2]?" "+e[2]:"")}
+
+// [author, work, ref, discipline, passage[en,pt,es,fr,it], prompt[en,pt,es,fr,it]]
+const Q=[
+["M","med","2.1","P",["Begin the morning by saying to thyself: I shall meet with the busy-body, the ungrateful, the arrogant, the deceitful, the envious. But none of them can injure me.","Comece a manhã dizendo a si mesmo: hoje encontrarei o intrometido, o ingrato, o arrogante, o enganador, o invejoso. Mas nenhum deles pode me ferir.","Empieza la mañana diciéndote: hoy me encontraré con el entrometido, el ingrato, el arrogante, el mentiroso, el envidioso. Pero ninguno de ellos puede dañarme.","Commence la matinée en te disant : je rencontrerai aujourd’hui un indiscret, un ingrat, un arrogant, un fourbe, un envieux. Mais aucun d’eux ne peut me nuire.","Comincia la mattina dicendo a te stesso: oggi incontrerò l’impiccione, l’ingrato, l’arrogante, l’ingannatore, l’invidioso. Ma nessuno di loro può farmi del male."],["Who is likely to test you today, and how do you want to meet them?","Quem provavelmente vai testar você hoje, e como você quer recebê-lo?","¿Quién es probable que te ponga a prueba hoy, y cómo quieres recibirlo?","Qui risque de te mettre à l’épreuve aujourd’hui, et comment veux-tu l’accueillir ?","Chi probabilmente ti metterà alla prova oggi, e come vuoi accoglierlo?"]],
+["M","med","4.3","P",["The universe is transformation; life is opinion.","O universo é transformação; a vida é opinião.","El universo es transformación; la vida es opinión.","L’univers est transformation ; la vie est opinion.","L’universo è trasformazione; la vita è opinione."],["What story are you telling yourself about a situation that is simply changing?","Que história você está contando a si mesmo sobre algo que está apenas mudando?","¿Qué historia te estás contando sobre algo que simplemente está cambiando?","Quelle histoire te racontes-tu sur une situation qui est simplement en train de changer ?","Quale storia ti stai raccontando su qualcosa che sta semplicemente cambiando?"]],
+["M","med","7.67","P",["Very little indeed is necessary for living a happy life.","Muito pouco é necessário para viver uma vida feliz.","Muy poco es necesario para vivir una vida feliz.","Il faut très peu de chose pour vivre heureux.","Ben poco è necessario per vivere una vita felice."],["What could you remove today without losing anything that matters?","O que você poderia tirar hoje sem perder nada que importa?","¿Qué podrías quitar hoy sin perder nada que importe?","Que pourrais-tu retirer aujourd’hui sans rien perdre d’important ?","Che cosa potresti togliere oggi senza perdere nulla di importante?"]],
+["M","med","10.16","A",["No longer talk at all about the kind of man that a good man ought to be, but be such.","Chega de discutir como deve ser um homem bom. Seja um.","Deja ya de discutir cómo debe ser un hombre bueno. Sé uno.","Cesse enfin de discuter de ce que doit être un homme de bien. Sois-le.","Smetti di discutere su come debba essere un uomo buono. Sii tale."],["Where are you describing a virtue instead of practising it?","Onde você está descrevendo uma virtude em vez de praticá-la?","¿Dónde estás describiendo una virtud en lugar de practicarla?","Où décris-tu une vertu au lieu de la pratiquer ?","Dove stai descrivendo una virtù invece di praticarla?"]],
+["M","med","6.6","W",["The best way of avenging thyself is not to become like the wrongdoer.","A melhor vingança é não se tornar igual a quem te fez mal.","La mejor manera de vengarte es no volverte como quien te ofendió.","La meilleure façon de te venger est de ne pas ressembler à celui qui t’a fait du tort.","Il modo migliore di vendicarti è non diventare simile a chi ti ha fatto torto."],["Whose behaviour are you at risk of copying out of resentment?","De quem você corre o risco de copiar o comportamento por ressentimento?","¿De quién corres el riesgo de copiar la conducta por resentimiento?","De qui risques-tu de copier le comportement par rancune ?","Di chi rischi di copiare il comportamento per risentimento?"]],
+["M","med","2.5","A",["Do every act of thy life as if it were the last.","Faça cada ato da sua vida como se fosse o último.","Haz cada acto de tu vida como si fuera el último.","Accomplis chaque action de ta vie comme si c’était la dernière.","Compi ogni azione della tua vita come se fosse l’ultima."],["Which task today deserves your full attention, as if nothing came after it?","Qual tarefa de hoje merece sua atenção inteira, como se nada viesse depois?","¿Qué tarea de hoy merece toda tu atención, como si nada viniera después?","Quelle tâche mérite aujourd’hui toute ton attention, comme si rien ne venait après ?","Quale compito di oggi merita tutta la tua attenzione, come se dopo non ci fosse nulla?"]],
+["M","med","4.3","P",["Nowhere, either with more quiet or more freedom from trouble, does a man retire than into his own soul.","Em lugar nenhum o homem encontra retiro mais tranquilo e livre de perturbação do que na própria alma.","En ningún lugar se retira el hombre con más calma y menos perturbación que dentro de su propia alma.","Nulle part l’homme ne trouve de retraite plus paisible ni plus libre de soucis que dans sa propre âme.","Da nessuna parte l’uomo si ritira con più quiete e meno affanni che nella propria anima."],["Where can you find ten quiet minutes inside the noise of today?","Onde você pode encontrar dez minutos de silêncio no barulho de hoje?","¿Dónde puedes encontrar diez minutos de calma en el ruido de hoy?","Où peux-tu trouver dix minutes de calme dans le bruit d’aujourd’hui ?","Dove puoi trovare dieci minuti di quiete nel rumore di oggi?"]],
+["M","med","7.59","W",["Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.","Olhe para dentro. Dentro está a fonte do bem, e ela sempre jorrará, se você sempre cavar.","Mira hacia dentro. Dentro está la fuente del bien, y siempre brotará si siempre cavas.","Regarde en toi. Au-dedans est la source du bien, et elle jaillira toujours si tu creuses toujours.","Guarda dentro di te. Dentro c’è la fonte del bene, e zampillerà sempre, se sempre scaverai."],["What good thing in you has been buried under busyness lately?","Que coisa boa em você anda soterrada pela correria?","¿Qué cosa buena en ti ha quedado enterrada bajo el ajetreo?","Quelle bonne chose en toi est enfouie sous l’agitation ces derniers temps ?","Quale cosa buona in te è rimasta sepolta sotto la fretta?"]],
+["M","med","5.16","P",["Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.","Assim como são seus pensamentos habituais, assim será o caráter da sua mente; pois a alma se tinge dos pensamentos.","Tal como sean tus pensamientos habituales, así será el carácter de tu mente; porque el alma se tiñe de los pensamientos.","Tels sont tes pensées habituelles, tel sera le caractère de ton esprit ; car l’âme se teint de ses pensées.","Quali sono i tuoi pensieri abituali, tale sarà il carattere della tua mente; perché l’anima si tinge dei pensieri."],["Which thought have you repeated most this week, and what colour is it giving you?","Qual pensamento você mais repetiu esta semana, e que cor ele está te dando?","¿Qué pensamiento has repetido más esta semana, y qué color te está dando?","Quelle pensée as-tu le plus répétée cette semaine, et quelle couleur te donne-t-elle ?","Quale pensiero hai ripetuto di più questa settimana, e che colore ti sta dando?"]],
+["M","med","8.47","P",["If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgement about it. And it is in thy power to wipe out this judgement now.","Se algo externo te aflige, não é a coisa que te perturba, mas o seu julgamento sobre ela. E está em seu poder apagar esse julgamento agora.","Si algo externo te aflige, no es la cosa lo que te perturba, sino tu juicio sobre ella. Y está en tu poder borrar ese juicio ahora.","Si une chose extérieure te chagrine, ce n’est pas elle qui te trouble, mais ton jugement sur elle. Et il est en ton pouvoir d’effacer ce jugement à l’instant.","Se qualcosa di esterno ti affligge, non è quella cosa a turbarti, ma il tuo giudizio su di essa. Ed è in tuo potere cancellare questo giudizio adesso."],["Name one judgement you could drop before lunch.","Cite um julgamento que você poderia largar antes do almoço.","Nombra un juicio que podrías soltar antes del almuerzo.","Nomme un jugement que tu pourrais lâcher avant midi.","Nomina un giudizio che potresti lasciar andare prima di pranzo."]],
+["M","med","7.29","P",["Confine thyself to the present.","Limite-se ao presente.","Limítate al presente.","Borne-toi au présent.","Limitati al presente."],["What are you rehearsing about tomorrow that today does not need?","O que você está ensaiando sobre amanhã que o hoje não precisa?","¿Qué estás ensayando sobre mañana que hoy no necesita?","Que répètes-tu au sujet de demain dont aujourd’hui n’a pas besoin ?","Che cosa stai provando per domani di cui oggi non ha bisogno?"]],
+["M","med","6.39","W",["Adapt thyself to the things with which thy lot has been cast; and the men among whom thou hast received thy portion, love them, but do it truly, sincerely.","Adapte-se às coisas que a sorte te reservou; e as pessoas entre as quais você recebeu seu lugar, ame-as, mas de verdade, com sinceridade.","Adáptate a las cosas que te ha tocado vivir; y a las personas entre las que has recibido tu lugar, ámalas, pero de verdad, con sinceridad.","Adapte-toi aux choses que le sort t’a données ; et les hommes parmi lesquels tu as reçu ta part, aime-les, mais vraiment, sincèrement.","Adattati alle cose che la sorte ti ha assegnato; e gli uomini tra cui hai ricevuto il tuo posto, amali, ma davvero, con sincerità."],["Who around you deserves more sincere care than they are getting?","Quem ao seu redor merece um cuidado mais sincero do que está recebendo?","¿Quién a tu alrededor merece un cuidado más sincero del que recibe?","Qui, autour de toi, mérite une attention plus sincère que celle qu’il reçoit ?","Chi intorno a te merita una cura più sincera di quella che riceve?"]],
+["M","med","4.49","W",["Be like the promontory against which the waves continually break, but it stands firm and tames the fury of the water around it.","Seja como o promontório contra o qual as ondas quebram sem parar: ele permanece firme e amansa a fúria das águas ao redor.","Sé como el promontorio contra el que rompen sin cesar las olas: se mantiene firme y amansa la furia del agua a su alrededor.","Sois comme le promontoire contre lequel les vagues se brisent sans cesse : il demeure ferme et apaise la fureur des eaux autour de lui.","Sii come il promontorio contro cui le onde si infrangono di continuo: resta saldo e placa la furia delle acque intorno a sé."],["What pressure will you simply stand through today, without reacting?","Que pressão você vai simplesmente atravessar hoje, sem reagir?","¿Qué presión vas a simplemente sostener hoy, sin reaccionar?","Quelle pression vas-tu simplement traverser aujourd’hui, sans réagir ?","Quale pressione sopporterai oggi semplicemente, senza reagire?"]],
+["M","med","6.54","A",["That which is not good for the swarm, neither is it good for the bee.","O que não é bom para a colmeia também não é bom para a abelha.","Lo que no es bueno para el enjambre tampoco es bueno para la abeja.","Ce qui n’est pas bon pour l’essaim n’est pas bon non plus pour l’abeille.","Ciò che non è bene per lo sciame non è bene nemmeno per l’ape."],["Is there a personal win you are chasing that costs the people around you?","Há alguma vitória pessoal que você persegue às custas de quem está ao seu redor?","¿Hay una victoria personal que persigues a costa de quienes te rodean?","Poursuis-tu une victoire personnelle qui coûte à ceux qui t’entourent ?","C’è una vittoria personale che insegui a spese di chi ti sta intorno?"]],
+["M","med","7.27","P",["Think not so much of what thou hast not as of what thou hast, and reflect how eagerly thou wouldst seek these things if thou hadst them not.","Pense menos no que você não tem e mais no que tem, e reflita com que ânsia você buscaria essas coisas se não as tivesse.","Piensa menos en lo que no tienes y más en lo que tienes, y reflexiona con qué ansia lo buscarías si no lo tuvieras.","Pense moins à ce que tu n’as pas qu’à ce que tu as, et songe avec quelle ardeur tu le chercherais si tu ne l’avais pas.","Pensa meno a ciò che non hai e più a ciò che hai, e rifletti con quanta brama lo cercheresti se non l’avessi."],["What do you have that you would grieve to lose?","O que você tem que doeria perder?","¿Qué tienes que te dolería perder?","Qu’as-tu que tu regretterais amèrement de perdre ?","Che cosa hai che ti addolorerebbe perdere?"]],
+["M","med","5.20","A",["That which is a hindrance is made a furtherance to an act; and that which is an obstacle on the road helps us on this road.","O que atrapalha a ação torna-se impulso para ela; e o que é obstáculo no caminho nos ajuda a seguir por ele.","Lo que estorba la acción se convierte en impulso para ella; y lo que es obstáculo en el camino nos ayuda a recorrerlo.","Ce qui entrave l’action devient ce qui la fait avancer ; et ce qui fait obstacle sur la route nous aide à la parcourir.","Ciò che ostacola l’azione diventa ciò che la fa avanzare; e ciò che sbarra la strada ci aiuta a percorrerla."],["What is the obstacle in front of you teaching you to do?","O que o obstáculo à sua frente está te ensinando a fazer?","¿Qué te está enseñando a hacer el obstáculo que tienes delante?","Qu’est-ce que l’obstacle devant toi t’apprend à faire ?","Che cosa ti sta insegnando a fare l’ostacolo che hai davanti?"]],
+["M","med","9.35","W",["Loss is nothing else than change.","A perda não é nada além de mudança.","La pérdida no es otra cosa que cambio.","La perte n’est rien d’autre que du changement.","La perdita non è altro che cambiamento."],["What recent loss could you look at again as a change?","Que perda recente você poderia olhar de novo como mudança?","¿Qué pérdida reciente podrías volver a mirar como un cambio?","Quelle perte récente pourrais-tu regarder à nouveau comme un changement ?","Quale perdita recente potresti guardare di nuovo come un cambiamento?"]],
+["M","med","3.10","W",["Short then is the time which every man lives, and small the nook of the earth where he lives.","Curto é o tempo que cada um vive, e pequeno o canto da terra onde vive.","Breve es el tiempo que cada uno vive, y pequeño el rincón de la tierra donde vive.","Court est le temps que chacun vit, et petit le coin de terre où il vit.","Breve è il tempo che ciascuno vive, e piccolo l’angolo di terra dove vive."],["If you saw your worry from a great height, how large would it be?","Se você visse sua preocupação lá do alto, de que tamanho ela seria?","Si vieras tu preocupación desde muy alto, ¿de qué tamaño sería?","Si tu voyais ton souci de très haut, quelle taille aurait-il ?","Se vedessi la tua preoccupazione da molto in alto, quanto sarebbe grande?"]],
+["M","med","4.43","W",["Time is a sort of river of passing events, and strong is its current.","O tempo é uma espécie de rio de acontecimentos que passam, e forte é a sua correnteza.","El tiempo es una especie de río de sucesos que pasan, y fuerte es su corriente.","Le temps est une sorte de fleuve d’événements qui passent, et son courant est violent.","Il tempo è una sorta di fiume di eventi che passano, e forte è la sua corrente."],["What are you trying to hold still that is already flowing past?","O que você está tentando segurar parado que já está passando?","¿Qué intentas mantener quieto que ya está pasando?","Que cherches-tu à retenir qui s’écoule déjà ?","Che cosa cerchi di tenere fermo che sta già scorrendo via?"]],
+["M","med","12.17","A",["If it is not right, do not do it; if it is not true, do not say it.","Se não é certo, não faça; se não é verdade, não diga.","Si no es correcto, no lo hagas; si no es verdad, no lo digas.","Si ce n’est pas juste, ne le fais pas ; si ce n’est pas vrai, ne le dis pas.","Se non è giusto, non farlo; se non è vero, non dirlo."],["Is there something you plan to say today that is not quite true?","Há algo que você pretende dizer hoje que não é bem verdade?","¿Hay algo que piensas decir hoy que no es del todo cierto?","Y a-t-il quelque chose que tu comptes dire aujourd’hui qui n’est pas tout à fait vrai ?","C’è qualcosa che pensi di dire oggi che non è del tutto vero?"]],
+["M","med","5.1","A",["In the morning when thou risest unwillingly, let this thought be present: I am rising to the work of a human being.","De manhã, quando levantar sem vontade, tenha este pensamento presente: estou me levantando para o trabalho de um ser humano.","Por la mañana, cuando te levantes sin ganas, ten presente este pensamiento: me levanto para la tarea de un ser humano.","Le matin, quand tu te lèves à contrecœur, aie cette pensée présente : je me lève pour faire l’œuvre d’un être humain.","Al mattino, quando ti alzi controvoglia, tieni presente questo pensiero: mi alzo per compiere l’opera di un essere umano."],["What work today is worth getting up for?","Que trabalho de hoje vale o esforço de levantar?","¿Qué trabajo de hoy vale la pena levantarse a hacer?","Quel travail aujourd’hui vaut la peine de se lever ?","Quale lavoro di oggi vale la pena di alzarsi?"]],
+["M","med","4.18","P",["How much trouble he avoids who does not look to see what his neighbour says or does or thinks.","Quanto incômodo evita quem não fica olhando o que o vizinho diz, faz ou pensa.","Cuántas molestias se ahorra quien no se fija en lo que su vecino dice, hace o piensa.","Que de tracas évite celui qui ne regarde pas ce que dit, fait ou pense son voisin.","Quanti fastidi evita chi non guarda a ciò che il vicino dice, fa o pensa."],["Whose opinion are you checking too often?","A opinião de quem você anda conferindo demais?","¿La opinión de quién estás revisando demasiado?","De qui consultes-tu l’avis trop souvent ?","Di chi stai controllando troppo spesso l’opinione?"]],
+["M","med","6.2","A",["Let it make no difference to thee whether thou art cold or warm, if thou art doing thy duty.","Que não faça diferença se você está com frio ou calor, desde que esteja cumprindo seu dever.","Que no te importe si tienes frío o calor, siempre que estés cumpliendo tu deber.","Qu’il te soit égal d’avoir froid ou chaud, pourvu que tu fasses ton devoir.","Che non ti importi se hai freddo o caldo, purché tu stia facendo il tuo dovere."],["Which duty are you postponing until conditions feel better?","Qual dever você está adiando até as condições parecerem melhores?","¿Qué deber estás posponiendo hasta que las condiciones parezcan mejores?","Quel devoir repousses-tu en attendant de meilleures conditions ?","Quale dovere stai rimandando finché le condizioni non sembreranno migliori?"]],
+["M","med","8.16","P",["Remember that to change thy opinion and to follow him who corrects thy error is as consistent with freedom as it is to persist in thy error.","Lembre-se: mudar de opinião e seguir quem corrige seu erro é tão compatível com a liberdade quanto insistir no erro.","Recuerda: cambiar de opinión y seguir a quien corrige tu error es tan propio de la libertad como persistir en el error.","Souviens-toi que changer d’avis et suivre celui qui corrige ton erreur est aussi conforme à la liberté que de persister dans l’erreur.","Ricorda che cambiare opinione e seguire chi corregge il tuo errore è libero quanto persistere nell’errore."],["Where would admitting you were wrong actually free you?","Onde admitir que errou realmente te libertaria?","¿Dónde te liberaría de verdad admitir que te equivocaste?","Où le fait d’admettre ton erreur te libérerait-il vraiment ?","Dove ammettere di aver sbagliato ti libererebbe davvero?"]],
+["M","med","4.35","W",["Everything is only for a day, both that which remembers and that which is remembered.","Tudo dura apenas um dia: tanto quem lembra quanto o que é lembrado.","Todo dura apenas un día: tanto quien recuerda como lo recordado.","Tout n’est que d’un jour, ce qui se souvient comme ce dont on se souvient.","Tutto dura un giorno soltanto, sia chi ricorda sia ciò che è ricordato."],["What would you do differently if no one would remember it?","O que você faria diferente se ninguém fosse se lembrar?","¿Qué harías distinto si nadie fuera a recordarlo?","Que ferais-tu autrement si personne ne devait s’en souvenir ?","Che cosa faresti diversamente se nessuno lo ricordasse?"]],
+["M","med","4.17","W",["Do not act as if thou wert going to live ten thousand years. Death hangs over thee. While thou livest, while it is in thy power, be good.","Não aja como se fosse viver dez mil anos. A morte paira sobre você. Enquanto vive, enquanto pode, seja bom.","No actúes como si fueras a vivir diez mil años. La muerte pende sobre ti. Mientras vives, mientras puedes, sé bueno.","N’agis pas comme si tu devais vivre dix mille ans. La mort est suspendue sur toi. Tant que tu vis, tant que tu le peux, sois bon.","Non agire come se dovessi vivere diecimila anni. La morte ti sovrasta. Finché vivi, finché puoi, sii buono."],["What good thing have you been saving for later?","Que coisa boa você anda guardando para depois?","¿Qué cosa buena has estado guardando para después?","Quelle bonne chose gardes-tu pour plus tard ?","Quale cosa buona stai rimandando a dopo?"]],
+["M","med","7.61","W",["The art of life is more like the wrestler’s art than the dancer’s, in being ready to stand firm against what comes unexpectedly.","A arte de viver se parece mais com a do lutador do que com a do dançarino: é estar pronto para resistir ao inesperado.","El arte de vivir se parece más al del luchador que al del bailarín: consiste en estar listo para resistir lo inesperado.","L’art de vivre ressemble plus à celui du lutteur qu’à celui du danseur : il faut être prêt à tenir face à l’imprévu.","L’arte di vivere somiglia più a quella del lottatore che a quella del danzatore: bisogna essere pronti a resistere all’imprevisto."],["How will you respond when today does not go to plan?","Como você vai reagir quando hoje não sair como planejado?","¿Cómo vas a responder cuando hoy no salga según lo previsto?","Comment réagiras-tu quand la journée ne se passera pas comme prévu ?","Come risponderai quando oggi le cose non andranno come previsto?"]],
+["M","med","8.59","A",["Men exist for the sake of one another. Teach them then or bear with them.","Os homens existem uns para os outros. Ensine-os, então, ou tenha paciência com eles.","Los hombres existen los unos para los otros. Enséñales, pues, o tenles paciencia.","Les hommes sont faits les uns pour les autres. Instruis-les donc, ou supporte-les.","Gli uomini esistono gli uni per gli altri. Dunque istruiscili, o sopportali."],["Is the person frustrating you someone to teach, or someone to bear with?","A pessoa que te frustra é alguém para ensinar ou para tolerar?","¿La persona que te frustra es alguien a quien enseñar o a quien tener paciencia?","La personne qui t’agace est-elle à instruire, ou à supporter ?","La persona che ti irrita è da istruire o da sopportare?"]],
+["M","med","2.11","W",["Since it is possible that thou mayest depart from life this very moment, regulate every act and thought accordingly.","Já que você pode deixar a vida neste exato momento, regule cada ato e cada pensamento de acordo.","Puesto que podrías dejar la vida en este mismo momento, ordena cada acto y cada pensamiento en consecuencia.","Puisque tu peux quitter la vie à l’instant même, règle chaque action et chaque pensée en conséquence.","Poiché potresti lasciare la vita in questo stesso istante, regola ogni azione e ogni pensiero di conseguenza."],["Which thought would you not want to be your last?","Qual pensamento você não gostaria que fosse o seu último?","¿Qué pensamiento no querrías que fuera el último?","Quelle pensée ne voudrais-tu pas qu’elle soit ta dernière ?","Quale pensiero non vorresti che fosse l’ultimo?"]],
+["M","med","8.36","W",["Do not disturb thyself by thinking of the whole of thy life. Ask thyself: what is there in this which is intolerable?","Não se perturbe pensando na vida inteira de uma vez. Pergunte-se: o que há de insuportável neste momento?","No te perturbes pensando en tu vida entera de golpe. Pregúntate: ¿qué hay de insoportable en esto, ahora?","Ne te trouble pas en pensant à ta vie entière. Demande-toi : qu’y a-t-il là d’insupportable ?","Non turbarti pensando alla tua vita intera. Chiediti: che cosa c’è di insopportabile in questo?"],["Break today’s hardest thing into its present moment. Is that moment bearable?","Divida o que há de mais difícil hoje no seu momento presente. Esse momento é suportável?","Reduce lo más difícil de hoy a su momento presente. ¿Es soportable ese momento?","Ramène la chose la plus dure du jour à l’instant présent. Cet instant est-il supportable ?","Riduci la cosa più dura di oggi al suo momento presente. Quel momento è sopportabile?"]],
+["E","ench","1","P",["Of things some are in our power, and others are not.","Das coisas, algumas estão em nosso poder, e outras não.","De las cosas, unas dependen de nosotros y otras no.","Parmi les choses, les unes dépendent de nous, les autres non.","Delle cose, alcune sono in nostro potere, altre no."],["Which worry on your list today is actually yours to act on?","Qual preocupação da sua lista de hoje realmente depende de você?","¿Qué preocupación de tu lista de hoy depende realmente de ti?","Quel souci de ta liste d’aujourd’hui dépend vraiment de toi ?","Quale preoccupazione della tua lista di oggi dipende davvero da te?"]],
+["E","ench","5","P",["Men are disturbed not by the things which happen, but by the opinions about the things.","O que perturba os homens não são as coisas que acontecem, mas as opiniões sobre elas.","Lo que perturba a los hombres no son las cosas que suceden, sino sus opiniones sobre ellas.","Ce qui trouble les hommes, ce ne sont pas les choses, mais les opinions qu’ils en ont.","Gli uomini sono turbati non dalle cose che accadono, ma dalle opinioni sulle cose."],["What happened, stripped of your opinion about it?","O que aconteceu, sem a sua opinião sobre isso?","¿Qué pasó, despojado de tu opinión al respecto?","Que s’est-il passé, une fois ton opinion retirée ?","Che cosa è successo, spogliato della tua opinione al riguardo?"]],
+["E","ench","8","W",["Seek not that the things which happen should happen as you wish; but wish the things which happen to be as they are, and you will have a tranquil flow of life.","Não queira que as coisas aconteçam como você deseja; deseje que aconteçam como acontecem, e sua vida correrá serena.","No pretendas que las cosas sucedan como deseas; desea que sucedan como suceden, y tu vida fluirá serena.","Ne cherche pas à ce que les choses arrivent comme tu le veux ; veuille qu’elles arrivent comme elles arrivent, et ta vie coulera paisiblement.","Non pretendere che le cose accadano come vuoi; vuoli che accadano come accadono, e la tua vita scorrerà serena."],["What are you still arguing with that has already happened?","Com o que você ainda está brigando que já aconteceu?","¿Con qué sigues discutiendo que ya ha ocurrido?","Contre quoi te bats-tu encore qui est déjà arrivé ?","Con che cosa stai ancora litigando che è già successo?"]],
+["E","ench","13","A",["If you would improve, be content to be thought foolish and stupid with respect to externals.","Se quer progredir, aceite parecer tolo e ignorante quanto às coisas externas.","Si quieres progresar, acepta parecer necio e ignorante respecto de las cosas externas.","Si tu veux progresser, accepte de passer pour un sot et un ignorant quant aux choses extérieures.","Se vuoi progredire, accetta di sembrare sciocco e ignorante riguardo alle cose esterne."],["What would you try if you did not mind looking foolish?","O que você tentaria se não se importasse em parecer bobo?","¿Qué intentarías si no te importara parecer tonto?","Qu’essaierais-tu si tu acceptais d’avoir l’air ridicule ?","Che cosa proveresti se non ti importasse di sembrare sciocco?"]],
+["E","frag","","W",["No man is free who is not master of himself.","Nenhum homem é livre se não é senhor de si mesmo.","Ningún hombre es libre si no es dueño de sí mismo.","Nul n’est libre s’il n’est maître de lui-même.","Nessuno è libero se non è padrone di sé."],["What habit is currently mastering you?","Que hábito está te dominando neste momento?","¿Qué hábito te está dominando ahora mismo?","Quelle habitude te domine en ce moment ?","Quale abitudine ti sta dominando in questo momento?"]],
+["E","disc","2.1","W",["It is not death or pain which is a fearful thing, but the fear of pain or death.","Não é a morte nem a dor que são terríveis, mas o medo da dor ou da morte.","No son la muerte ni el dolor lo temible, sino el miedo al dolor o a la muerte.","Ce n’est pas la mort ni la douleur qui sont redoutables, mais la peur de la douleur ou de la mort.","Non sono la morte o il dolore a essere temibili, ma la paura del dolore o della morte."],["Is it the thing you dread, or the dread itself, that is costing you?","É a coisa que você teme, ou o próprio medo, que está te custando caro?","¿Es aquello que temes, o el propio temor, lo que te está costando?","Est-ce la chose redoutée, ou la crainte elle-même, qui te coûte ?","È la cosa che temi, o il timore stesso, a costarti?"]],
+["E","disc","3.23","A",["First say to yourself what you would be; and then do what you have to do.","Primeiro diga a si mesmo quem você quer ser; depois faça o que precisa ser feito.","Primero dite a ti mismo qué quieres ser; después haz lo que tengas que hacer.","Dis-toi d’abord ce que tu veux être ; puis fais ce que tu as à faire.","Prima di’ a te stesso che cosa vuoi essere; poi fa’ ciò che devi fare."],["Who do you want to be by tonight, in one word?","Quem você quer ser até esta noite, numa palavra?","¿Quién quieres ser esta noche, en una palabra?","Qui veux-tu être ce soir, en un mot ?","Chi vuoi essere entro stasera, in una parola?"]],
+["E","disc","1.24","W",["It is difficulties which show what men are.","São as dificuldades que mostram quem os homens são.","Son las dificultades las que muestran lo que son los hombres.","Ce sont les difficultés qui montrent ce que sont les hommes.","Sono le difficoltà a mostrare chi sono gli uomini."],["What is your current difficulty showing about you?","O que a sua dificuldade atual está mostrando sobre você?","¿Qué está mostrando de ti tu dificultad actual?","Que révèle de toi ta difficulté actuelle ?","Che cosa sta mostrando di te la tua difficoltà attuale?"]],
+["E","ench","11","W",["Never say about anything, I have lost it; but say, I have restored it.","Nunca diga de coisa alguma «perdi», mas «devolvi».","Nunca digas de nada «lo he perdido», sino «lo he devuelto».","Ne dis jamais de rien : « je l’ai perdu », mais : « je l’ai rendu ».","Non dire mai di nulla «l’ho perso», ma «l’ho restituito»."],["What could you return with gratitude instead of mourning?","O que você poderia devolver com gratidão em vez de lamentar?","¿Qué podrías devolver con gratitud en lugar de lamentarlo?","Que pourrais-tu rendre avec gratitude plutôt que de le pleurer ?","Che cosa potresti restituire con gratitudine invece di piangerlo?"]],
+["E","ench","17","A",["Remember that you are an actor in a play, of such a kind as the author may choose. Your business is to act well the character assigned to you.","Lembre-se de que você é ator numa peça, do tipo que o autor escolher. Sua tarefa é representar bem o papel que te foi dado.","Recuerda que eres actor en una obra, del tipo que el autor elija. Tu tarea es representar bien el papel que se te ha asignado.","Souviens-toi que tu es acteur dans une pièce, telle qu’il plaît à l’auteur. Ton affaire est de bien jouer le rôle qui t’est donné.","Ricorda che sei attore in un dramma, quale l’autore vorrà. Il tuo compito è recitare bene la parte che ti è stata assegnata."],["What role were you handed today, and how will you play it well?","Que papel você recebeu hoje, e como vai representá-lo bem?","¿Qué papel te ha tocado hoy, y cómo lo vas a representar bien?","Quel rôle t’a-t-on donné aujourd’hui, et comment le joueras-tu bien ?","Quale parte ti è stata data oggi, e come la reciterai bene?"]],
+["E","frag","","P",["He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.","Sábio é quem não se lamenta pelo que não tem, mas se alegra com o que tem.","Sabio es quien no se lamenta por lo que no tiene, sino que se alegra por lo que tiene.","Sage est celui qui ne s’afflige pas de ce qu’il n’a pas, mais se réjouit de ce qu’il a.","Saggio è chi non si duole di ciò che non ha, ma gioisce di ciò che ha."],["Name three things you have that you did not have five years ago.","Cite três coisas que você tem e não tinha cinco anos atrás.","Nombra tres cosas que tienes y que no tenías hace cinco años.","Nomme trois choses que tu as et que tu n’avais pas il y a cinq ans.","Nomina tre cose che hai e che cinque anni fa non avevi."]],
+["E","disc","1.15","A",["No great thing is produced suddenly, since not even the bunch of grapes or the fig is.","Nada de grandioso nasce de repente; nem mesmo o cacho de uva ou o figo.","Nada grande se produce de repente; ni siquiera el racimo de uvas o el higo.","Rien de grand ne se fait tout d’un coup, pas même la grappe de raisin ou la figue.","Nulla di grande nasce all’improvviso, nemmeno il grappolo d’uva o il fico."],["Which slow project needs patience more than speed this week?","Qual projeto lento precisa mais de paciência do que de velocidade esta semana?","¿Qué proyecto lento necesita más paciencia que velocidad esta semana?","Quel projet lent a besoin de patience plutôt que de vitesse cette semaine ?","Quale progetto lento ha bisogno di pazienza più che di velocità questa settimana?"]],
+["E","disc","4.1","W",["Freedom is not acquired by satisfying yourself with what you desire, but by destroying desire.","A liberdade não se conquista satisfazendo os desejos, mas desfazendo-se deles.","La libertad no se conquista satisfaciendo los deseos, sino deshaciéndose de ellos.","La liberté ne s’acquiert pas en satisfaisant ses désirs, mais en les supprimant.","La libertà non si conquista soddisfacendo i desideri, ma estinguendoli."],["Which want could you let go of instead of feeding?","De qual vontade você poderia abrir mão em vez de alimentar?","¿De qué deseo podrías desprenderte en lugar de alimentarlo?","Quel désir pourrais-tu lâcher plutôt que de le nourrir ?","Quale desiderio potresti lasciar andare invece di alimentarlo?"]],
+["E","ench","3","P",["In everything which pleases the soul, remember to inquire also of what nature it is, beginning from the smallest things.","Em tudo o que agrada à alma, lembre-se de perguntar também qual é a sua natureza, começando pelas menores coisas.","En todo lo que agrada al alma, recuerda preguntarte también cuál es su naturaleza, empezando por las cosas más pequeñas.","En toute chose qui plaît à l’âme, souviens-toi de te demander aussi quelle est sa nature, en commençant par les plus petites.","In ogni cosa che piace all’anima, ricorda di chiederti anche quale sia la sua natura, cominciando dalle più piccole."],["What do you enjoy that you have never looked at closely?","Do que você gosta e nunca olhou de perto?","¿Qué disfrutas que nunca has mirado de cerca?","Qu’aimes-tu que tu n’as jamais regardé de près ?","Che cosa ti piace che non hai mai guardato da vicino?"]],
+["E","ench","33","A",["Let silence be the general rule, or let only what is necessary be said, and in few words.","Que o silêncio seja a regra, ou que se diga só o necessário, e em poucas palavras.","Que el silencio sea la regla, o que se diga solo lo necesario, y en pocas palabras.","Que le silence soit la règle, ou qu’on ne dise que le nécessaire, et en peu de mots.","Sia il silenzio la regola, o si dica solo il necessario, e in poche parole."],["In your next conversation, what is the one thing worth saying?","Na sua próxima conversa, qual é a única coisa que vale a pena dizer?","En tu próxima conversación, ¿qué es lo único que vale la pena decir?","Dans ta prochaine conversation, quelle est la seule chose qui vaille d’être dite ?","Nella tua prossima conversazione, qual è l’unica cosa che vale la pena dire?"]],
+["E","ench","20","P",["Remember that it is not he who reviles you or strikes you who insults you, but it is your opinion about these things as being insulting.","Lembre-se: não é quem te xinga ou te agride que te ofende, mas a sua opinião de que isso é ofensivo.","Recuerda: no te ofende quien te insulta o te golpea, sino tu opinión de que eso es ofensivo.","Souviens-toi que ce n’est pas celui qui t’injurie ou te frappe qui t’outrage, mais ton opinion que ces choses sont outrageantes.","Ricorda che non è chi ti insulta o ti colpisce a offenderti, ma la tua opinione che queste cose siano offensive."],["What slight are you still carrying that only your opinion keeps alive?","Que ofensa você ainda carrega que só a sua opinião mantém viva?","¿Qué ofensa sigues cargando que solo tu opinión mantiene viva?","Quel affront portes-tu encore que seule ton opinion maintient en vie ?","Quale offesa porti ancora che solo la tua opinione tiene in vita?"]],
+["E","ench","51","A",["How long will you delay to think yourself worthy of the best things?","Até quando você vai adiar o momento de se julgar digno das melhores coisas?","¿Hasta cuándo vas a aplazar el considerarte digno de lo mejor?","Jusqu’à quand tarderas-tu à te juger digne des meilleures choses ?","Fino a quando rimanderai il ritenerti degno delle cose migliori?"],["What are you waiting for permission to begin?","O que você está esperando permissão para começar?","¿Qué estás esperando que te den permiso para empezar?","Qu’attends-tu qu’on t’autorise à commencer ?","Che cosa stai aspettando il permesso di cominciare?"]],
+["S","ep","1","A",["Hold every hour in your grasp. Lay hold of to-day’s task, and you will not need to depend so much upon to-morrow’s.","Agarre cada hora. Tome nas mãos a tarefa de hoje e você dependerá menos da de amanhã.","Aférrate a cada hora. Toma en tus manos la tarea de hoy y dependerás menos de la de mañana.","Saisis chaque heure. Empare-toi de la tâche d’aujourd’hui, et tu dépendras moins de celle de demain.","Afferra ogni ora. Prendi in mano il compito di oggi e dipenderai meno da quello di domani."],["Which single task, done today, would lighten tomorrow most?","Qual tarefa, feita hoje, mais aliviaria o amanhã?","¿Qué tarea, hecha hoy, aliviaría más el mañana?","Quelle tâche, faite aujourd’hui, allégerait le plus demain ?","Quale compito, fatto oggi, alleggerirebbe di più il domani?"]],
+["S","ep","1","A",["While we are postponing, life speeds by.","Enquanto adiamos, a vida passa correndo.","Mientras aplazamos, la vida pasa corriendo.","Pendant que nous remettons à plus tard, la vie passe en courant.","Mentre rimandiamo, la vita corre via."],["What have you postponed more than three times?","O que você já adiou mais de três vezes?","¿Qué has aplazado más de tres veces?","Qu’as-tu repoussé plus de trois fois ?","Che cosa hai rimandato più di tre volte?"]],
+["S","ep","13","P",["We suffer more often in imagination than in reality.","Sofremos mais vezes na imaginação do que na realidade.","Sufrimos más a menudo en la imaginación que en la realidad.","Nous souffrons plus souvent en imagination qu’en réalité.","Soffriamo più spesso nell’immaginazione che nella realtà."],["Is the thing you fear happening now, or only in your head?","O que você teme está acontecendo agora, ou só na sua cabeça?","¿Lo que temes está ocurriendo ahora, o solo en tu cabeza?","Ce que tu crains arrive-t-il maintenant, ou seulement dans ta tête ?","Ciò che temi sta accadendo ora, o solo nella tua testa?"]],
+["S","ep","13","P",["There are more things likely to frighten us than there are to crush us.","Há mais coisas capazes de nos assustar do que de nos esmagar.","Hay más cosas que pueden asustarnos que aplastarnos.","Il y a plus de choses qui nous effraient que de choses qui nous écrasent.","Ci sono più cose che ci spaventano di quante ci schiaccino."],["Which of your fears is loud but harmless?","Qual dos seus medos faz barulho mas não machuca?","¿Cuál de tus miedos hace ruido pero no daña?","Laquelle de tes peurs est bruyante mais inoffensive ?","Quale delle tue paure fa rumore ma non fa danni?"]],
+["S","ep","2","P",["It is not the man who has too little, but the man who craves more, that is poor.","Pobre não é quem tem pouco, mas quem deseja mais.","Pobre no es quien tiene poco, sino quien desea más.","Le pauvre n’est pas celui qui a peu, mais celui qui désire davantage.","Povero non è chi ha poco, ma chi desidera di più."],["Where does your sense of not-enough come from today?","De onde vem hoje a sua sensação de que nada é suficiente?","¿De dónde viene hoy tu sensación de que nada alcanza?","D’où vient aujourd’hui ton sentiment que ce n’est jamais assez ?","Da dove viene oggi la tua sensazione che non basti mai?"]],
+["S","ep","2","P",["Nothing, to my thinking, is a better proof of a well-ordered mind than a man’s ability to stop just where he is and pass some time in his own company.","Nada prova melhor uma mente bem ordenada do que a capacidade de parar onde se está e passar algum tempo na própria companhia.","Nada prueba mejor una mente ordenada que la capacidad de detenerse donde uno está y pasar un tiempo en su propia compañía.","Rien ne prouve mieux un esprit bien réglé que la capacité de s’arrêter là où l’on est et de passer du temps en sa propre compagnie.","Nulla prova meglio una mente ben ordinata della capacità di fermarsi dove si è e passare un po’ di tempo in propria compagnia."],["Can you sit alone with your thoughts for five minutes without a screen?","Você consegue ficar cinco minutos sozinho com seus pensamentos, sem tela?","¿Puedes estar cinco minutos a solas con tus pensamientos, sin pantalla?","Peux-tu rester cinq minutes seul avec tes pensées, sans écran ?","Riesci a stare cinque minuti da solo con i tuoi pensieri, senza schermo?"]],
+["S","ep","28","P",["Why do you wonder that travel does not help you, seeing that you always take yourself with you?","Por que se espanta que viajar não te ajude, se você sempre leva a si mesmo junto?","¿Por qué te extraña que viajar no te ayude, si siempre te llevas contigo?","Pourquoi t’étonner que les voyages ne t’aident pas, puisque tu t’emmènes toujours avec toi ?","Perché ti stupisci che viaggiare non ti giovi, se porti sempre te stesso con te?"],["What are you hoping a change of place will fix that is really inside you?","O que você espera que uma mudança de lugar resolva que, na verdade, está dentro de você?","¿Qué esperas que arregle un cambio de lugar que en realidad está dentro de ti?","Qu’espères-tu qu’un changement de lieu répare, qui est en réalité en toi ?","Che cosa speri che un cambio di luogo risolva, che in realtà è dentro di te?"]],
+["S","ep","123","A",["Until we have begun to go without them, we fail to realise how unnecessary many things are.","Só quando começamos a viver sem elas percebemos como muitas coisas são desnecessárias.","Hasta que empezamos a prescindir de ellas, no nos damos cuenta de lo innecesarias que son muchas cosas.","Tant que nous n’avons pas commencé à nous en passer, nous ignorons combien de choses sont inutiles.","Finché non cominciamo a farne a meno, non ci accorgiamo di quante cose siano superflue."],["What could you go without for one day, as an experiment?","Sem o que você poderia ficar por um dia, como experiência?","¿De qué podrías prescindir un día, como experimento?","De quoi pourrais-tu te passer pendant une journée, à titre d’expérience ?","Di che cosa potresti fare a meno per un giorno, come esperimento?"]],
+["S","ep","76","A",["No man was ever wise by chance.","Ninguém jamais foi sábio por acaso.","Nadie fue nunca sabio por casualidad.","Personne n’est jamais devenu sage par hasard.","Nessuno è mai stato saggio per caso."],["What deliberate practice is shaping you right now?","Que prática deliberada está te moldando agora?","¿Qué práctica deliberada te está formando ahora?","Quelle pratique délibérée te façonne en ce moment ?","Quale pratica deliberata ti sta plasmando adesso?"]],
+["S","ep","77","W",["As it is with a play, so it is with life: what matters is not how long the acting lasts, but how good it is.","A vida é como uma peça: o que importa não é quanto ela dura, mas quão boa é.","La vida es como una obra de teatro: lo que importa no es cuánto dura, sino lo buena que es.","Il en est de la vie comme d’une pièce : ce qui compte n’est pas sa durée, mais sa qualité.","La vita è come una commedia: non conta quanto dura, ma quanto è ben recitata."],["If today were a scene, would it be worth watching?","Se hoje fosse uma cena, valeria a pena assistir?","Si hoy fuera una escena, ¿valdría la pena verla?","Si aujourd’hui était une scène, vaudrait-elle d’être vue ?","Se oggi fosse una scena, varrebbe la pena guardarla?"]],
+["S","ep","101","W",["Let us prepare our minds as if we had come to the very end of life. Let us postpone nothing. Let us balance life’s account every day.","Preparemos a mente como se tivéssemos chegado ao fim da vida. Não adiemos nada. Fechemos as contas da vida todos os dias.","Preparemos la mente como si hubiéramos llegado al final de la vida. No aplacemos nada. Cerremos cada día las cuentas de la vida.","Préparons notre esprit comme si nous étions arrivés au terme de la vie. Ne remettons rien. Soldons chaque jour le compte de la vie.","Prepariamo la mente come se fossimo giunti alla fine della vita. Non rimandiamo nulla. Chiudiamo ogni giorno il conto della vita."],["What would balance your account before tonight?","O que fecharia as suas contas antes desta noite?","¿Qué cerraría tus cuentas antes de esta noche?","Qu’est-ce qui solderait ton compte avant ce soir ?","Che cosa chiuderebbe i tuoi conti prima di stasera?"]],
+["S","ep","7","A",["Associate with those who will make a better man of you. Welcome those whom you yourself can improve.","Conviva com quem te torna melhor. Acolha aqueles que você mesmo pode melhorar.","Trata con quienes te harán mejor. Acoge a aquellos a quienes tú mismo puedes mejorar.","Fréquente ceux qui te rendront meilleur. Accueille ceux que tu peux toi-même rendre meilleurs.","Frequenta chi può renderti migliore. Accogli coloro che tu stesso puoi migliorare."],["Who makes you better, and when did you last seek them out?","Quem te torna melhor, e quando foi a última vez que você o procurou?","¿Quién te hace mejor, y cuándo fue la última vez que lo buscaste?","Qui te rend meilleur, et quand l’as-tu recherché pour la dernière fois ?","Chi ti rende migliore, e quando l’hai cercato l’ultima volta?"]],
+["S","ep","16","P",["If you live according to nature, you will never be poor; if you live according to opinion, you will never be rich.","Se viver segundo a natureza, nunca será pobre; se viver segundo a opinião, nunca será rico.","Si vives según la naturaleza, nunca serás pobre; si vives según la opinión, nunca serás rico.","Si tu vis selon la nature, tu ne seras jamais pauvre ; si tu vis selon l’opinion, tu ne seras jamais riche.","Se vivi secondo natura, non sarai mai povero; se vivi secondo l’opinione, non sarai mai ricco."],["Which of your goals belongs to you, and which to other people’s opinion?","Quais dos seus objetivos são seus, e quais são da opinião alheia?","¿Cuáles de tus metas son tuyas, y cuáles de la opinión ajena?","Lesquels de tes objectifs t’appartiennent, et lesquels relèvent de l’opinion des autres ?","Quali dei tuoi obiettivi sono tuoi, e quali dell’opinione altrui?"]],
+["S","ep","6","A",["I feel that I am being not only reformed, but transformed.","Sinto que não estou apenas sendo corrigido, mas transformado.","Siento que no solo me estoy corrigiendo, sino transformando.","Je sens que je ne suis pas seulement corrigé, mais transformé.","Sento di non essere soltanto corretto, ma trasformato."],["What has genuinely changed in you this year?","O que mudou de verdade em você este ano?","¿Qué ha cambiado de verdad en ti este año?","Qu’est-ce qui a vraiment changé en toi cette année ?","Che cosa è cambiato davvero in te quest’anno?"]],
+["S","ep","5","A",["Our motto, as you know, is to live according to Nature.","Nosso lema, como você sabe, é viver segundo a natureza.","Nuestro lema, como sabes, es vivir según la naturaleza.","Notre devise, tu le sais, est de vivre selon la nature.","Il nostro motto, come sai, è vivere secondo natura."],["What would the natural, unforced version of today look like?","Como seria a versão natural, sem forçar, do dia de hoje?","¿Cómo sería la versión natural, sin forzar, de hoy?","À quoi ressemblerait la version naturelle, sans forcer, de cette journée ?","Come sarebbe la versione naturale, senza forzature, di oggi?"]],
+["S","ep","3","P",["When friendship is settled, you must trust; before friendship is formed, you must pass judgement.","Firmada a amizade, é preciso confiar; antes de firmá-la, é preciso julgar.","Una vez sellada la amistad, hay que confiar; antes de sellarla, hay que juzgar.","Une fois l’amitié établie, il faut se fier ; avant qu’elle ne se forme, il faut juger.","Stretta l’amicizia, bisogna fidarsi; prima di stringerla, bisogna giudicare."],["Whom are you judging who has already earned your trust?","Quem você está julgando que já conquistou a sua confiança?","¿A quién estás juzgando que ya se ha ganado tu confianza?","Qui juges-tu alors qu’il a déjà gagné ta confiance ?","Chi stai giudicando che ha già guadagnato la tua fiducia?"]],
+["S","ep","9","A",["The wise man is self-sufficient, yet he desires friends, neighbours and associates.","O sábio basta a si mesmo, e ainda assim deseja amigos, vizinhos e companheiros.","El sabio se basta a sí mismo, y aun así desea amigos, vecinos y compañeros.","Le sage se suffit à lui-même, et pourtant il désire des amis, des voisins, des compagnons.","Il saggio basta a se stesso, eppure desidera amici, vicini e compagni."],["Which friend have you not reached out to in too long?","Que amigo você não procura há tempo demais?","¿A qué amigo no has buscado desde hace demasiado tiempo?","Quel ami n’as-tu pas contacté depuis trop longtemps ?","Quale amico non cerchi da troppo tempo?"]],
+["S","ep","26","W",["He who has learned to die has unlearned slavery.","Quem aprendeu a morrer desaprendeu a servir.","Quien ha aprendido a morir ha desaprendido a ser esclavo.","Qui a appris à mourir a désappris la servitude.","Chi ha imparato a morire ha disimparato a essere schiavo."],["What would you stop putting up with if you were not afraid?","O que você deixaria de tolerar se não tivesse medo?","¿Qué dejarías de tolerar si no tuvieras miedo?","Que cesserais-tu de supporter si tu n’avais pas peur ?","Che cosa smetteresti di sopportare se non avessi paura?"]],
+["Z","dl","7.23","A",["The reason why we have two ears and only one mouth is that we may listen the more and talk the less.","Temos dois ouvidos e uma só boca para ouvir mais e falar menos.","Tenemos dos oídos y una sola boca para escuchar más y hablar menos.","Nous avons deux oreilles et une seule bouche pour écouter davantage et parler moins.","Abbiamo due orecchie e una sola bocca per ascoltare di più e parlare di meno."],["In your next meeting, how much could you listen before speaking?","Na sua próxima reunião, quanto você conseguiria ouvir antes de falar?","En tu próxima reunión, ¿cuánto podrías escuchar antes de hablar?","Lors de ta prochaine réunion, combien de temps pourrais-tu écouter avant de parler ?","Nella tua prossima riunione, quanto potresti ascoltare prima di parlare?"]],
+["Z","dl","7.26","A",["Well-being is attained little by little, and is nevertheless no little thing itself.","O bem-estar se alcança pouco a pouco, e ainda assim não é pouca coisa.","El bienestar se alcanza poco a poco, y sin embargo no es poca cosa.","Le bien-être s’atteint peu à peu, et pourtant ce n’est pas peu de chose.","Il benessere si raggiunge a poco a poco, eppure non è cosa da poco."],["What small step today counts, even if nobody notices it?","Que pequeno passo de hoje conta, mesmo que ninguém perceba?","¿Qué pequeño paso de hoy cuenta, aunque nadie lo note?","Quel petit pas compte aujourd’hui, même si personne ne le remarque ?","Quale piccolo passo di oggi conta, anche se nessuno lo nota?"]]
+];
+const LANGS=["en","pt","es","fr","it"];
+const EPOCH=Date.UTC(2026,9,16)/864e5; // Day 1 = 16 Oct 2026
+const N=Q.length;
+
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function rawPerm(c){const r=mulberry((c*2654435761)^0x5f3759df);const p=[...Array(N).keys()];
+  for(let i=N-1;i>0;i--){const j=Math.floor(r()*(i+1));[p[i],p[j]]=[p[j],p[i]]}return p}
+const cache=new Map();
+function perm(c){if(cache.has(c))return cache.get(c);const p=rawPerm(c);
+  const prevLast=rawPerm(c-1)[N-1]; if(p[0]===prevLast){[p[0],p[1]]=[p[1],p[0]]}
+  cache.set(c,p);return p}
+
+const fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric',hourCycle:'h23',weekday:'short'});
+function london(){const o={};for(const x of fmt.formatToParts(new Date()))o[x.type]=x.value;
+  return {y:+o.year,m:+o.month,d:+o.day,h:+o.hour,mi:+o.minute,s:+o.second,wd:o.weekday}}
+function roman(n){const t=[[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],[90,"XC"],[50,"L"],[40,"XL"],[10,"X"],[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]];let s="";for(const[v,r]of t)while(n>=v){s+=r;n-=v}return s}
+const LAT={Sun:"Solis",Mon:"Lunae",Tue:"Martis",Wed:"Mercurii",Thu:"Iovis",Fri:"Veneris",Sat:"Saturni"};
+function entryFor(t){const day=Date.UTC(t.y,t.m-1,t.d)/864e5;const rel=day-EPOCH;
+  const c=Math.floor(rel/N), p=rel-c*N;return {e:Q[perm(c)[p]],dayNo:rel+1,cycle:c+1}}
+
+const $=id=>document.getElementById(id);
+const store={get(k){try{return localStorage.getItem(k)}catch(_){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(_){}}};
+let lang=store.get("stoa-lang");
+if(!LANGS.includes(lang)){const nav=(navigator.language||"en").slice(0,2).toLowerCase();lang=LANGS.includes(nav)?nav:"en"}
+let currentKey=null,lastT=null,current=null,override=null,count=1;
+function dkey(t){return `${t.y}-${t.m}-${t.d}`}
+function loadDay(t){override=null;count=1;try{const v=JSON.parse(store.get("stoa-day")||"null");
+  if(v&&v.k===dkey(t)&&Number.isInteger(v.c)&&v.c>=1){count=v.c;override=(Number.isInteger(v.i)&&v.i>=0&&v.i<N)?v.i:null}}catch(_){}}
+function saveDay(t){store.set("stoa-day",JSON.stringify({k:dkey(t),c:count,i:override}))}
+
+function paint(t){lastT=t;const d=entryFor(t),dayNo=d.dayNo,cycle=d.cycle;const e=override!==null?Q[override]:d.e;const li=LANGS.indexOf(lang),u=UI[lang];current=e;
+  document.documentElement.lang=lang;
+  $("disc").textContent=u.disc[e[3]];$("text").textContent=e[4][li];
+  $("author").textContent=AUTH[e[0]][lang];$("work").textContent=cite(e);
+  $("prompt").textContent=e[5][li];$("lab").textContent=u.lab;$("nextlab").textContent=u.next;
+  $("copy-l").textContent=u.copy;$("renew-l").textContent=u.renew;$("mednum").textContent=`${u.med} ${count}`;paintNotes(u);syncNote();$("clock").title=u.tz;$("note").textContent=u.note;
+  $("roman").textContent=`${roman(t.d)} · ${roman(t.m)} · ${roman(t.y)}`;$("dies").textContent="Dies "+LAT[t.wd];
+  $("daynum").textContent=dayNo>0?`${u.day} ${dayNo.toLocaleString(lang)}`:u.before;
+  for(const b of document.querySelectorAll("#langs button"))b.setAttribute("aria-pressed",b.dataset.l===lang);
+  syncThemeLabel();}
+
+function flip(t,keep){const s=$("stele");if(!keep)loadDay(t);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||currentKey===null){paint(t);return}
+  s.classList.add("turning");
+  setTimeout(()=>{paint(t);s.classList.remove("turning");s.classList.add("arriving");void s.offsetWidth;s.classList.remove("arriving")},560)}
+
+function tick(){const t=london();const key=`${t.y}-${t.m}-${t.d}`;
+  if(key!==currentKey){flip(t);currentKey=key}
+  const left=86400-(t.h*3600+t.mi*60+t.s);const h=Math.floor(left/3600),m=Math.floor(left%3600/60),s=left%60;
+  $("countdown").textContent=[h,m,s].map(v=>String(v).padStart(2,"0")).join(":")}
+
+// theme
+const root=document.documentElement;
+function isDark(){const a=root.getAttribute("data-theme");return a?a==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+function syncThemeLabel(){$("theme").setAttribute("aria-label",isDark()?UI[lang].toLight:UI[lang].toDark)}
+const savedTheme=store.get("stoa-theme");if(savedTheme==="dark"||savedTheme==="light")root.setAttribute("data-theme",savedTheme);
+$("theme").addEventListener("click",()=>{const next=isDark()?"light":"dark";root.setAttribute("data-theme",next);store.set("stoa-theme",next);syncThemeLabel()});
+
+// language
+$("langs").addEventListener("click",ev=>{const b=ev.target.closest("button");if(!b||b.dataset.l===lang)return;
+  lang=b.dataset.l;store.set("stoa-lang",lang);const s=$("stele");s.classList.add("fade");
+  setTimeout(()=>{paint(lastT||london());s.classList.remove("fade")},180)});
+
+$("renew").addEventListener("click",()=>{flush();const t=lastT||london();const cur=Q.indexOf(current);let i;do{i=Math.floor(Math.random()*N)}while(i===cur&&N>1);
+  override=i;count+=1;saveDay(t);flip(t,true)});
+
+// ---------- meditation notes ----------
+const field=$("field"),savedEl=$("saved");
+const COLS=["ink","yellow","purple","blue","red","orange"];
+const SENT={"#000001":"ink","#000002":"yellow","#000003":"purple","#000004":"blue","#000005":"red","#000006":"orange"};
+let db=null,uid=null,storeReady=false,noteKey=null,dirty=false,timer=null,saving=Promise.resolve();
+function paintNotes(u){$("notes-lab").textContent=u.nlab;field.dataset.ph=u.ph;
+  $("t-b").title=u.b;$("t-b").setAttribute("aria-label",u.b);$("t-i").title=u.i;$("t-i").setAttribute("aria-label",u.i);$("t-u").title=u.u;$("t-u").setAttribute("aria-label",u.u);
+  COLS.forEach((c,k)=>{const b=$("c-"+c);b.title=u.cols[k];b.setAttribute("aria-label",u.cols[k])})}
+function sanitize(html){const doc=new DOMParser().parseFromString("<div>"+html+"</div>","text/html");const out=document.createElement("div");
+  const walk=(src,dst)=>{for(const n of src.childNodes){
+    if(n.nodeType===3){dst.appendChild(document.createTextNode(n.nodeValue));continue}
+    if(n.nodeType!==1)continue;const tag=n.tagName.toLowerCase();let el=null;
+    if(["b","strong"].includes(tag))el=document.createElement("b");
+    else if(["i","em"].includes(tag))el=document.createElement("i");
+    else if(tag==="u")el=document.createElement("u");
+    else if(tag==="br"){dst.appendChild(document.createElement("br"));continue}
+    else if(["div","p"].includes(tag))el=document.createElement("div");
+    else if(tag==="font"){el=document.createElement("span");const nm=SENT[(n.getAttribute("color")||"").toLowerCase()];if(nm)el.className="c-"+nm}
+    else if(tag==="span"){el=document.createElement("span");const c=[...n.classList].find(x=>/^c-(ink|yellow|purple|blue|red|orange)$/.test(x));if(c)el.className=c}
+    if(el){walk(n,el);dst.appendChild(el)}else walk(n,dst)}};
+  walk(doc.body.firstChild,out);return out.innerHTML}
+function normalizeColors(){for(const f of field.querySelectorAll("font[color]")){const name=SENT[f.getAttribute("color").toLowerCase()];
+    const sp=document.createElement("span");if(name)sp.className="c-"+name;while(f.firstChild)sp.appendChild(f.firstChild);f.replaceWith(sp)}
+  for(const sp of field.querySelectorAll("span[style]"))sp.removeAttribute("style")}
+function keyNow(){return lastT?`${dkey(lastT)}_m${count}`:null}
+async function readNote(k){
+  if(db&&uid){try{const snap=await db.collection("data/users/"+uid).doc("note_"+k).get();return snap.exists?String(snap.data().html||""):""}catch(_){}}
+  return store.get("stoa-note-"+k)||""}
+function writeNote(k,html){
+  saving=saving.then(async()=>{
+    if(db&&uid){try{await db.collection("data/users/"+uid).doc("note_"+k).set({html,day:k.split("_")[0],passage:Q.indexOf(current),updated:Date.now()});
+      savedEl.textContent=UI[lang].saved;return}catch(_){}}
+    try{localStorage.setItem("stoa-note-"+k,html);savedEl.textContent=UI[lang].local}catch(_){savedEl.textContent=UI[lang].fail}});
+  return saving}
+function flush(){if(!dirty||!noteKey)return;clearTimeout(timer);dirty=false;const html=sanitize(field.innerHTML);writeNote(noteKey,html==="<br>"?"":html)}
+async function syncNote(){if(!storeReady)return;const k=keyNow();if(!k||k===noteKey)return;flush();noteKey=k;savedEl.textContent="";
+  const html=await readNote(k);if(noteKey!==k)return;field.innerHTML=sanitize(html)}
+field.addEventListener("input",()=>{if(field.innerHTML==="<br>")field.innerHTML="";dirty=true;savedEl.textContent=UI[lang].saving;
+  clearTimeout(timer);timer=setTimeout(flush,900);updateTools()});
+field.addEventListener("blur",flush);
+addEventListener("pagehide",flush);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")flush()});
+field.addEventListener("paste",e=>{e.preventDefault();const t=(e.clipboardData||window.clipboardData).getData("text/plain");document.execCommand("insertText",false,t)});
+function exec(cmd,val){field.focus();try{document.execCommand("styleWithCSS",false,false)}catch(_){}document.execCommand(cmd,false,val);
+  dirty=true;clearTimeout(timer);timer=setTimeout(flush,900);updateTools()}
+function updateTools(){for(const[id,c]of[["t-b","bold"],["t-i","italic"],["t-u","underline"]]){let on=false;try{on=document.queryCommandState(c)}catch(_){}$(id).setAttribute("aria-pressed",String(on&&document.activeElement===field))}}
+document.addEventListener("selectionchange",updateTools);
+for(const b of document.querySelectorAll("#tools button")){b.addEventListener("mousedown",e=>e.preventDefault());
+  b.addEventListener("click",()=>{if(b.dataset.cmd)exec(b.dataset.cmd);else{const hex=Object.keys(SENT).find(h=>SENT[h]===b.dataset.c);exec("foreColor",hex)}})}
+(async()=>{try{if(window.claude&&claude.use){const [d,u]=await Promise.all([claude.use("db"),claude.use("user")]);
+    if(d&&u){const id=await u.id();if(id){db=d;uid=id}}}}catch(_){}
+  storeReady=true;syncNote()})();
+tick();setInterval(tick,1000);
+
+$("copy").addEventListener("click",()=>{if(!current)return;const li=LANGS.indexOf(lang);
+  const txt=`“${current[4][li]}”\n— ${AUTH[current[0]][lang]}, ${cite(current)}`;const b=$("copy");
+  const lb=$("copy-l");const done=()=>{lb.textContent=UI[lang].copied;setTimeout(()=>lb.textContent=UI[lang].copy,1600)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents($("text"));const g=getSelection();g.removeAllRanges();g.addRange(r);lb.textContent=UI[lang].sel};
+  try{navigator.clipboard.writeText(txt).then(done,sel)}catch(_){sel()}});
+</script>
+
+</body></html>
